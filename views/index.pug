@@ -3,3 +3,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  a(href='/new') Send a new message!
+  div
+    each val in messages
+      div(class='message') 
+       p message: #{val.text} 
+       p user: #{val.user} 
+       p sent: #{val.added}
