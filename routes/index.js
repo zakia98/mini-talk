@@ -19,7 +19,7 @@ const messages = [
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Mini Messageboard', messages: messages });
+  res.render('index', { title: 'Mini Talk', messages: messages });
 });
 
 router.get('/new', function(req, res, next) {
@@ -29,10 +29,11 @@ router.get('/new', function(req, res, next) {
 router.post('/new', (req, res, next) => {
   console.log(req.body)
   messages.push({
-    text:req.body.name,
-    message:req.body.message,
+    text:req.body.message,
+    user:req.body.name,
     added: new Date()
   })
+  console.log(messages)
   res.redirect('/')
 })
 

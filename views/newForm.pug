@@ -1,11 +1,11 @@
 extends layout
 
 block content
-    a(href='/') < Go back
+    a(href='/' class="button") < Go back
     h1 #{title}
     form(method='POST' action="/new" class='form') 
         label(for="name") Name: 
             input(type="text", name="name") 
         label(for='message') Message: 
             input(type="text", name='message')
-        button(type='submit') Submit
+        button(type='submit' class='button') Submit
