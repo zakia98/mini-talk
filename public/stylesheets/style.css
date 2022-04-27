@@ -55,3 +55,8 @@ p {
   font-weight:bold;
   color:rgb(255, 127, 191)
 }
+
+.messages-container {
+  display: flex;
+  flex-direction: column-reverse;
+}

@@ -4,7 +4,7 @@ block content
   h1(class='title')= title
   p Welcome to #{title}
   a(href='/new' class="button") Send a new message!
-  div
+  div(class='messages-container')
     each val in messages
       div(class='message') 
        p(class='messageText') #{val.text} 
